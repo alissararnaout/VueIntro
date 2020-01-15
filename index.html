@@ -21,7 +21,7 @@
           <!-- avatar / user icon-->
           <!-- if the user has an avatar, show it -->
           <li v-if="user.avatar">
-            <img src="" alt="user avatar" class="u-avatar">
+            <img :src="'images/' + user.avatar" alt="user avatar" class="u-avatar">
           </li>
 
           <!-- else show this -->

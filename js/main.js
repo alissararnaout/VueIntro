@@ -8,7 +8,7 @@ var vm = new Vue({
     // mock up the user - this well eventually come from the database UMS (user management system)
     user: {
       isAdmin: false,
-      avatar: null,
+      avatar: "thor.png", // or whatever you have
       isLoggedIn: true
     },
 
