@@ -12,12 +12,16 @@ var vm = new Vue({
       isLoggedIn: true
     },
 
-    // this data would also come from the database, but we'll just mock it up for now
-    videodata: [
+    // this data would come from the database
+    videodata: [ // wer are using these to populate our content sec
       { name: "Star Wars The Force Awakens", thumb: "forceawakens.jpg", vidsource: "forceawakens.mp4", description: "yet another star wars movie" },
       { name: "Stranger Things", thumb: "strangerthings.jpg", vidsource: "strangerthings.mp4", description: "don't get lost in the upside down" },
       { name: "Marvel's The Avengers", thumb: "avengers.jpg", vidsource: "avengers.mp4", description: "will they make black widow action figures this time?" }
     ],
+    
+    videotitle: "video title goes here", // just take the things you need from the object and populate your vue
+    vidsource: "",
+    viddescription: "video description here",
 
     showDetails: false
   },
@@ -36,7 +40,17 @@ var vm = new Vue({
       // the expression evaluates to true or false - if true, set the value equal to left of colon
       // if false, set value equal to the right
       this.user.isLoggedIn = (this.user.isLoggedIn) ? false : true;
-    }
+    },
 
+    showMovieDetails({name, vidsource, description}) {
+      //console.log('show these details', movie);
+
+      this.videotitle = name;
+      this.vidsource = vidsource;
+      this.viddescription = description;
+
+      // make the movie show up
+      this.showDetails = true;
+    }
   }
 });
