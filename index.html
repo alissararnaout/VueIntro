@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Vue Intro</title>
 </head>
 <body>
 
@@ -15,7 +15,7 @@
 
         <ul>
             <li v-for="prof in collection">
-                <p @click="logClicked">((prof,name}}, {{prof,role}}</p>
+                <p @click="logClicked">{{prof.name}}, {{prof.role}}</p>
             </li>
         </ul>
     </main>

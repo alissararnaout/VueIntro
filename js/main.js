@@ -11,7 +11,7 @@ const my_vm = (() => {
             collection: [ // array of objects
                 {name: "Joe", role: "Prof"},
                 {name: "John", role: "Prof"},
-                {name: "Jarrod", role: "Prof"},
+                {name: "Jarrod", role: "Prof"}
             ]
         },
 
